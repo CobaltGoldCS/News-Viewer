@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+div.App {
+  width: 90vw;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.small-icon {
+  object-fit: scale-down;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rss-menu {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+.rss-article {
+  display: grid;
+  grid-template-areas: 
+    'icon title'
+    'content content';
+  grid-template-columns: 15vw 65vw;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.rss-article > h3 {
+  grid-area: title;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rss-article > p {
+  grid-area: content;
+  max-width: 80vw;
+  margin: 0;
+}
+
+.rss-article > p img {
+  overflow: hidden;
+  object-fit: contain;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rss-article > img {
+  grid-area: icon;
+  width: 10vw;
+  height: 10vw;
 }
