@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {ArticleInfo, consumeNASA, consumeNYT, consumeVerge, Source} from '../rssConsumers'
 import '../App.css'
-const url = require('url')
 
 interface RssMenuProps {
     rssUrl: string
